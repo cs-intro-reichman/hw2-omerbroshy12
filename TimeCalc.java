@@ -34,6 +34,8 @@ public class TimeCalc {
             underTenHours = "0" + hours;
             System.out.println(underTenHours + ":" + underTenMinutes);
 		}
+        else 
+        {
         if (hours < 10)
         {
             underTenHours = "0" + hours;
@@ -44,6 +46,7 @@ public class TimeCalc {
             underTenMinutes = "0" + hours;
             System.out.println(hours + ":" + underTenMinutes);
         }
+    }
         if (minutes >= 10 && hours >= 10)
         {
             System.out.println(hours + ":" + minutes);
