@@ -12,7 +12,6 @@ public class TimeCalc {
             minutesToAdd -= 60;
             hoursToAdd++;
         }
-
         if (minutesToAdd + minutes < 60)
         {
             minutes += minutesToAdd;
@@ -23,11 +22,13 @@ public class TimeCalc {
             minutes -= 60;
             minutes += minutesToAdd;
         }
+
         while (hoursToAdd + hours > 23)
         {
             hoursToAdd -= 24;
         }
         hours += hoursToAdd;
+
         if (minutes < 10 && hours < 10)
 		{
 			underTenMinutes = "0" + minutes;
@@ -43,7 +44,7 @@ public class TimeCalc {
         }
         if (minutes < 10)
         {
-            underTenMinutes = "0" + hours;
+            underTenMinutes = "0" + minutes;
             System.out.println(hours + ":" + underTenMinutes);
         }
     }
