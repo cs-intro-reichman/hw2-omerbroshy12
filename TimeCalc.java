@@ -5,7 +5,7 @@ public class TimeCalc {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         int minutesToAdd = Integer.parseInt(args[1]);
         int hoursToAdd = 0;
-        String underTenMinutes;
+        String underTenMinutes, underTenHours;
 
         while (minutesToAdd > 60)
         {
@@ -27,14 +27,26 @@ public class TimeCalc {
         {
             hoursToAdd -= 24;
         }
-        if (minutes < 10)
+        hours += hoursToAdd;
+        if (minutes < 10 && hours < 10)
 		{
 			underTenMinutes = "0" + minutes;
-			System.out.println((hours + hoursToAdd) + ":" + underTenMinutes);
+            underTenHours = "0" + hours;
+            System.out.println(underTenHours + ":" + underTenMinutes);
 		}
-        else 
+        if (hours < 10)
         {
-            System.out.println((hours + hoursToAdd) + ":" + minutes);
+            underTenHours = "0" + hours;
+            System.out.println(underTenHours + ":" + minutes);
+        }
+        if (minutes < 10)
+        {
+            underTenMinutes = "0" + hours;
+            System.out.println(hours + ":" + underTenMinutes);
+        }
+        if (minutes >= 10 && hours >= 10)
+        {
+            System.out.println(hours + ":" + minutes);
         }
     }
 }
