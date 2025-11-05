@@ -3,6 +3,7 @@ public class Cheers {
         public static void main(String[] args) 
         {
 	    String word = args[0];
+            word = word.toUpperCase();
             int num = Integer.parseInt(args[1]);
             char letter;
             for (int i = 0; i < word.length(); i++)
