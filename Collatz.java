@@ -8,7 +8,7 @@ public class Collatz {
 
 		if (mode.equals("c"))
 		{
-			System.out.println("Every one of the first " + seed + " hailstone sequences reached 1");
+			System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
 		}
 		else if (mode.equals("v"))
 		{
@@ -41,7 +41,7 @@ public class Collatz {
 			count++;
 			System.out.println(" (" + count + ")");
 		}
-		System.out.println("Every one of the first " + seed + " hailstone sequences reached 1");
+		System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
 		}
 	}
 }
